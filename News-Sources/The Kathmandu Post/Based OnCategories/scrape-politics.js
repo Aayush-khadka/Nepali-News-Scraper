@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 
 (async () => {
-  const url = "https://kathmandupost.com/art-culture";
+  const url = "https://kathmandupost.com/politics";
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -54,17 +54,15 @@ const puppeteer = require("puppeteer");
       const title = document.querySelector(".col-sm-8 h1");
       return title.textContent.trim();
     });
-
-    const tag = await newPage.evaluate(() => {
-      const articleTag = document.querySelector(".col-sm-8  h4");
-      return articleTag.textContent.trim();
-    });
-
     const subArticleTitle = await newPage.evaluate(() => {
       const title = document.querySelector(".title-sub");
       return title.textContent.trim();
     });
 
+    const tag = await newPage.evaluate(() => {
+      const articleTag = document.querySelector(".col-sm-8  h4");
+      return articleTag.textContent.trim();
+    });
     const publishedTimes = await newPage.evaluate(() => {
       const publishedTimes = document.querySelectorAll(".updated-time");
       return Array.from(publishedTimes).map((time) => time.textContent.trim());
@@ -73,11 +71,7 @@ const puppeteer = require("puppeteer");
     const articelImg = await newPage.evaluate(() => {
       const img = document.querySelector(".col-sm-8 img.img-responsive");
 
-      if (img) {
-        return img.src;
-      } else {
-        return null;
-      }
+      return img ? img.src : "No Image Found";
     });
 
     console.log(`Article ${i + 1} Content:`);
@@ -91,8 +85,8 @@ const puppeteer = require("puppeteer");
     console.log("published Time: ", publishedTimes[0]);
     console.log("Updated Time:", publishedTimes[1]);
     console.log("Updated Place:", publishedTimes[2]);
-    console.log("Tag:", tag);
-    console.log("General Tag: art-culture");
+    console.log("Tag: ", tag);
+    console.log("General Tag: politics");
 
     console.log(article);
 

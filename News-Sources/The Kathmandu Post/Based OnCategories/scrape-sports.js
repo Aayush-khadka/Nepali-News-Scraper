@@ -72,12 +72,7 @@ const puppeteer = require("puppeteer");
 
     const articelImg = await newPage.evaluate(() => {
       const img = document.querySelector(".col-sm-8 img.img-responsive");
-
-      if (img) {
-        return img.src;
-      } else {
-        return null;
-      }
+      return img ? img.src : "No Image Found";
     });
 
     console.log(`Article ${i + 1} Content:`);
@@ -92,7 +87,7 @@ const puppeteer = require("puppeteer");
     console.log("Updated Time:", publishedTimes[1]);
     console.log("Updated Place:", publishedTimes[2]);
     console.log("Tag:", tag);
-    console.log("General Tag: valley");
+    console.log("General Tag: sports");
 
     console.log(article);
 

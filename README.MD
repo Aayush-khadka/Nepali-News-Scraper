@@ -1,6 +1,6 @@
 # Nepali News Scraper
 
-Nepali News Scraper is a **JavaScript-based tool** powered by **Puppeteer** that automates the scraping of articles from major Nepali news websites. Currently, it supports **The Kathmandu Post**, with plans to expand to other outlets.
+A JavaScript-based web scraping tool using **Puppeteer** to scrape news articles from various Nepali news sources. Currently, the scraper supports **The Kathmandu Post**, with plans to expand to other sources like **The Himalayan Times**, **Rising Nepal**, and more. The tool allows users to scrape the latest articles based on categories such as finance, sports, politics, art-culture, valley, etc. Additionally, users can specify a particular news URL to scrape.
 
 ## Supported News Sources
 
@@ -9,7 +9,7 @@ Nepali News Scraper is a **JavaScript-based tool** powered by **Puppeteer** that
 - **[Rising Nepal](#rising-nepal-details)** _(Planned)_
 - **[Onlinekhabar English](#onlinekhabar-english-details)** _(Planned)_
 - **[Nepali Times](#nepali-times-details)** _(Planned)_
-- **[The Himalayan Times](#the-himalayan-times-details)** *(Planned)*w
+- **[The Himalayan Times](#the-himalayan-times-details)** _(Planned)_
 - **[MyRepublica](#myrepublica-details)** _(Planned)_
 - **[HimalPress (English)](#himalpress-english-details)** _(Planned)_
 - **[New Spotlight Magazine](#new-spotlight-magazine-details)** _(Planned)_

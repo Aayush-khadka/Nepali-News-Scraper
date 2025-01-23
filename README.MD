@@ -97,11 +97,9 @@ This scraper automates the extraction of articles from **The Kathmandu Post**, s
 
 ---
 
----
+## Disclaimer
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+This project is intended for **educational purposes only**. The developer is not responsible for any misuse of this tool. Please use it responsibly and respect the terms of service of the websites being scraped.
 
 ---
 

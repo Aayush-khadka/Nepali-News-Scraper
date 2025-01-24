@@ -1,24 +1,39 @@
+Here's an improved version of your text for readability, structure, and clarity:
+
+---
+
 # Nepali News Scraper
 
-A JavaScript-powered web scraping tool leveraging **Puppeteer** to extract news articles from popular Nepali news sources. This tool enables users to retrieve the latest articles across categories such as finance, sports, politics, art & culture, and valley. Additionally, it allows targeted scraping of individual articles by simply providing the URL of articles of supported sites.
+A JavaScript-based web scraping tool powered by **Puppeteer**. This tool extracts news articles from popular Nepali news sources, allowing users to retrieve the latest articles across categories such as finance, sports, politics, art & culture, and the valley. Users can also scrape individual articles by providing the article URL from supported sites.
+
+---
+
+## Features
+
+- Retrieve news articles by category from supported sites.
+- Scrape individual articles with a specific URL.
+- Data includes metadata such as title, subtitle, author, publication date, and content.
+---
 
 ## Supported News Sources
 
-- **[The Kathmandu Post](#the-kathmandu-post-details)**
-- **[Rising Nepal](#rising-nepal-details)** 
+- **[The Kathmandu Post](https://kathmandupost.com)**
+- **[Rising Nepal](https://risingnepaldaily.com)** 
 
-## News Sources Planned for Support
-- **[Onlinekhabar English](#onlinekhabar-english-details)** _(Planned)_
-- **[Nepali Times](#nepali-times-details)** _(Planned)_
-- **[The Himalayan Times](#the-himalayan-times-details)** _(Planned)_
-- **[MyRepublica](#myrepublica-details)** _(Planned)_
-- **[HimalPress (English)](#himalpress-english-details)** _(Planned)_
-- **[New Spotlight Magazine](#new-spotlight-magazine-details)** _(Planned)_
-- **[Nepal Press (English)](#nepal-press-english-details)** _(Planned)_
-- **[Enewspolar](#enewspolar-details)** _(Planned)_
-- **[Khabarhub (English)](#khabarhub-english-details)** _(Planned)_
-- **More coming soon!**
+---
 
+## Planned News Sources
+
+The following sources are in the pipeline for support:
+
+- **[Onlinekhabar English](https://english.onlinekhabar.com)**  
+- **[Nepali Times](https://nepalitimes.com)**  
+- **[The Himalayan Times](https://www.thehimalayantimes.com)**  
+- **[MyRepublica](https://myrepublica.nagariknetwork.com)**   
+- **[New Spotlight Magazine](https://www.spotlightnepal.com)**  
+- **[Nepal Press](https://english.nepalpress.com)**  
+- **[Enewspolar](https://enewspolar.com)**  
+- **[Khabarhub](https://english.khabarhub.com)**  
 ---
 
 ## Installation
@@ -27,44 +42,51 @@ A JavaScript-powered web scraping tool leveraging **Puppeteer** to extract news 
    ```bash
    git clone https://github.com/Aayush-khadka/Nepali-News-Scraper.git
    ```
-2. Navigate to the directory:
+2. Navigate to the project directory:
    ```bash
    cd Nepali-News-Scraper
    ```
-3. Install dependencies:
+3. Install the required dependencies:
    ```bash
    npm install
    ```
 
 ---
 
-## Sample Scraped Data Structure
+## Example Output
 
-Below is an example of the data extracted from a scraped article:
+The following is a sample of the structured data output from a scraped article:
 
-```Console
+```json
 {
-  title: "Article Title",
-  subtitle: "Article Subtitle",
-  authorName: "Author Name",
-  authorProfileLink: "https://kathmandupost.com/authors/author-name",
-  articleLink: "https://kathmandupost.com/politics/2023/10/10/example-article",
-  articleImage: "https://kathmandupost.com/images/example-image.jpg",
-  publishedTime: "2023-10-10T12:00:00",
-  updatedTime: "2023-10-10T14:00:00",
-  updatedPlace: "Kathmandu",
-  articleText: "Full text of the article...",
-  articleType: "category"
+  "title": "Article Title",
+  "subtitle": "Article Subtitle",
+  "authorName": "Author Name",
+  "authorProfileLink": "https://kathmandupost.com/authors/author-name",
+  "articleLink": "https://kathmandupost.com/politics/2023/10/10/example-article",
+  "articleImage": "https://kathmandupost.com/images/example-image.jpg",
+  "publishedTime": "2023-10-10T12:00:00",
+  "updatedTime": "2023-10-10T14:00:00",
+  "updatedPlace": "Kathmandu",
+  "articleText": "Full text of the article...",
+  "articleType": "category"
 }
+```
 
+---
 
 ## Disclaimer
 
-This project is intended for **educational purposes only**. The developer is not responsible for any misuse of this tool. Please use it responsibly and respect the terms of service of the websites being scraped.
+This project is developed for **educational purposes only**. The developer is not responsible for any misuse of the tool. Please adhere to the terms of service of the websites being scraped and use the tool responsibly.
 
 ---
 
 ## Contact
 
-- **GitHub Issues**: [Issues Page](https://github.com/Aayush-khadka/Nepali-News-Scraper/issues)
-- **Email**: khadkaaayush90@gmail.com
+For any issues or feedback, feel free to reach out:
+
+- **GitHub Issues**: [Submit Issues](https://github.com/Aayush-khadka/Nepali-News-Scraper/issues)  
+- **Email**: [khadkaaayush90@gmail.com](mailto:khadkaaayush90@gmail.com)  
+
+--- 
+

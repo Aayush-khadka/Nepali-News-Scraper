@@ -91,7 +91,7 @@ This scraper automates the extraction of articles from **The Kathmandu Post**, s
   updatedTime: "2023-10-10T14:00:00",
   updatedPlace: "Kathmandu",
   articleText: "Full text of the article...",
-  articleType: "Politics"
+  articleType: "category"
 }
 ```
 

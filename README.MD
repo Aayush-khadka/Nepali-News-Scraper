@@ -1,12 +1,13 @@
 # Nepali News Scraper
 
-A JavaScript-based web scraping tool using **Puppeteer** to scrape news articles from various Nepali news sources. Currently, the scraper supports **The Kathmandu Post**, with plans to expand to other sources like **The Himalayan Times**, **Rising Nepal**, and more. The tool allows users to scrape the latest articles based on categories such as finance, sports, politics, art-culture, valley, etc. Additionally, users can specify a particular news URL to scrape.
+A JavaScript-powered web scraping tool leveraging **Puppeteer** to extract news articles from popular Nepali news sources. This tool enables users to retrieve the latest articles across categories such as finance, sports, politics, art & culture, and valley. Additionally, it allows targeted scraping of individual articles by simply providing the URL of articles of supported sites.
 
 ## Supported News Sources
 
 - **[The Kathmandu Post](#the-kathmandu-post-details)**
-- **[Annapurna Post](#annapurna-post-details)** _(Planned)_
-- **[Rising Nepal](#rising-nepal-details)** _(Planned)_
+- **[Rising Nepal](#rising-nepal-details)** 
+
+## News Sources Planned for Support
 - **[Onlinekhabar English](#onlinekhabar-english-details)** _(Planned)_
 - **[Nepali Times](#nepali-times-details)** _(Planned)_
 - **[The Himalayan Times](#the-himalayan-times-details)** _(Planned)_
@@ -37,49 +38,11 @@ A JavaScript-based web scraping tool using **Puppeteer** to scrape news articles
 
 ---
 
-## The Kathmandu Post Details
+## Sample Scraped Data Structure
 
-### Scraping Overview
+Below is an example of the data extracted from a scraped article:
 
-This scraper automates the extraction of articles from **The Kathmandu Post**, starting with the **Valley** category. By modifying the URL, it can scrape other sections like Finance, Sports, and Politics.
-
-#### Steps for Scraping
-
-1. **Launch Puppeteer**  
-   Open a browser instance and navigate to the desired category page.
-
-   ```javascript
-   const puppeteer = require("puppeteer");
-
-   (async () => {
-     const url = "https://kathmandupost.com/valley";
-     const browser = await puppeteer.launch();
-     const page = await browser.newPage();
-     await page.goto(url, { waitUntil: "domcontentloaded" });
-   })();
-   ```
-
-2. **Extract Article Links**  
-   Gather all article links from the page using CSS selectors.
-
-   ```javascript
-   const links = await page.evaluate(() => {
-     const articleLinks = document.querySelectorAll(
-       ".block--morenews article.article-image div.image.image-sm.image-220.pull-right a"
-     );
-     return Array.from(articleLinks).map((link) => link.href);
-   });
-
-   console.log("Total links found:", links.length);
-   ```
-
-3. **Scrape Individual Articles**  
-   For each link, extract key details such as title, author, publication time, and article content.
-
-4. **Output the Data**  
-   Each article is scraped and logged with the following details:
-
-```javascript
+```Console
 {
   title: "Article Title",
   subtitle: "Article Subtitle",
@@ -93,9 +56,7 @@ This scraper automates the extraction of articles from **The Kathmandu Post**, s
   articleText: "Full text of the article...",
   articleType: "category"
 }
-```
 
----
 
 ## Disclaimer
 

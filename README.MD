@@ -1,6 +1,4 @@
-Here's an improved version of your text for readability, structure, and clarity:
 
----
 
 # Nepali News Scraper
 

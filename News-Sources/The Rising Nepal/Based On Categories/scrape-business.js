@@ -82,5 +82,7 @@ const puppeteer = require("puppeteer");
     console.log(
       "======================================================================="
     );
+    await newPage.close();
   }
+  await browser.close();
 })();
